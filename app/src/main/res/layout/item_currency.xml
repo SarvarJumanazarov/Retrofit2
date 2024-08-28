@@ -3,104 +3,257 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/codeTxt"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialConstrain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="code"
-        android:textSize="20sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="140dp" />
+        android:backgroundTint="@color/primarydark2"
+        android:elevation="8dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/ccyTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="ccy"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/codeTxt"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        tools:layout_editor_absoluteX="140dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
 
-    <TextView
-        android:id="@+id/ccyNmRuTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/ccyTxt"
-        android:gravity="center"
-        android:text="ccyNmRu"
-        android:textSize="20sp"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gStartHorizantal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25" />
 
-        tools:layout_editor_absoluteX="140dp" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gStartHorizantalCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.50" />
 
-    <TextView
-        android:id="@+id/ccyNmUzTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/ccyNmRuTxt"
-        android:gravity="center"
-        android:text="ccyNmUz"
-        android:textSize="20sp"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gStartHorizantalBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.75" />
 
-        tools:layout_editor_absoluteX="140dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/primarydark3"
+                app:layout_constraintBottom_toTopOf="@+id/gStartHorizantalCenter"
+                app:layout_constraintEnd_toStartOf="@+id/gStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gStartHorizantal">
+                <TextView
+                    android:id="@+id/uzbSom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="3dp"
+                    android:text="Somga Teng"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:layout_editor_absoluteY="399dp" />
 
-    <TextView
-        android:id="@+id/ccyNmEnTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/ccyNmUzTxt"
-        android:gravity="center"
-        android:text="ccyNmEn"
-        android:textSize="20sp"
+            </com.google.android.material.card.MaterialCardView>
 
-        tools:layout_editor_absoluteX="140dp" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardEuro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/primarydark3"
+                app:layout_constraintEnd_toStartOf="@+id/gStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
 
-    <TextView
-        android:id="@+id/nominalTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/ccyNmEnTxt"
-        android:gravity="center"
-        android:text="nominal"
-        android:textSize="20sp"
+                >
 
-        tools:layout_editor_absoluteX="140dp" />
+                <TextView
+                    android:id="@+id/ccyNmUzTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:text="EURO"
+                    android:layout_gravity="center"
+                    android:textSize="20sp" />
+            </com.google.android.material.card.MaterialCardView>
 
-    <TextView
-        android:id="@+id/rateTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/nominalTxt"
-        android:text="rate"
-        android:textSize="20sp"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardEuroDiff"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/primarydark3"
+                app:layout_constraintBottom_toTopOf="@+id/gStartHorizantalBottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gStart"
+                app:layout_constraintTop_toTopOf="@+id/gStartHorizantalCenter">
 
-        tools:layout_editor_absoluteX="140dp" />
 
-    <TextView
-        android:id="@+id/diffTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="diff"
-        app:layout_constraintTop_toBottomOf="@+id/rateTxt"
-        android:textSize="20sp"
+                <TextView
+                    android:id="@+id/diffTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="15"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="282dp"
+                    tools:layout_editor_absoluteY="117dp" />
 
-        tools:layout_editor_absoluteX="140dp" />
+            </com.google.android.material.card.MaterialCardView>
 
-    <TextView
-        android:id="@+id/dateTxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="date"
-        app:layout_constraintTop_toBottomOf="@+id/diffTxt"
-        android:textSize="20sp"
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardSom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/primarydark3"
+                app:layout_constraintBottom_toBottomOf="@+id/gStartHorizantal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gStart"
+                app:layout_constraintTop_toTopOf="parent">
 
-        tools:layout_editor_absoluteX="140dp" />
+                <TextView
+                    android:id="@+id/nominalTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_gravity="center"
+                    android:text="100"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/gStartHorizantalCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:backgroundTint="@color/primarydark3"
+                app:layout_constraintStart_toEndOf="@+id/gStart"
+                app:layout_constraintTop_toBottomOf="@+id/gStartHorizantal"
+
+
+                >
+
+                <TextView
+                    android:id="@+id/rateTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="TextView"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="150dp"
+                    tools:layout_editor_absoluteY="201dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardSana"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="3dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/primarydark3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/gStart"
+                app:layout_constraintTop_toTopOf="@+id/gStartHorizantalBottom">
+
+                <TextView
+                    android:id="@+id/dateTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_gravity="center"
+                    android:text="28.08.2024"
+                    android:textSize="20sp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:elevation="3dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/primarydark3"
+                app:layout_constraintBottom_toTopOf="@id/gStartHorizantalBottom"
+                app:layout_constraintEnd_toStartOf="@+id/gStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gStartHorizantalCenter">
+
+                <TextView
+                    android:id="@+id/rateTxt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Bugungi farq"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="150dp"
+                    tools:layout_editor_absoluteY="201dp" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialSanaTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="3dp"
+                app:cardCornerRadius="15dp"
+                android:backgroundTint="@color/primarydark3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/gStart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/gStartHorizantalBottom">
+
+                <TextView
+                    android:id="@+id/sanaTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:text="Sana"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="150dp"
+                    tools:layout_editor_absoluteY="201dp" />
+            </com.google.android.material.card.MaterialCardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-
