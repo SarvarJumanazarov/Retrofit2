@@ -44,9 +44,7 @@ class MainActivity3 : AppCompatActivity() {
                 }
 
                 searchList.clear()
-
                 searchList = filterList.toMutableList()
-
                 adapter = CurrencyAdapter(searchList)
                 binding.rec.adapter = adapter
             }
