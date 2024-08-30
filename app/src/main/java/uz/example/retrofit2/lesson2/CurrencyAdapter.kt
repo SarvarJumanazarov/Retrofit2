@@ -14,11 +14,11 @@ class CurrencyAdapter(val list: List<Currency>,
     inner class VH(private  val binding:ItemCurrencyBinding,
         ):RecyclerView.ViewHolder(binding.root) {
         fun getBind(currency: Currency) {
-          //  binding.codeTxt.text = "${currency.code}"
-           // binding.ccyTxt.text = "${currency.ccy}"
-        //    binding.ccyNmRuTxt.text = "${currency.ccyNmRu}"
-            binding.ccyNmUzTxt.text = "${currency.ccyNmUz}"
-         //   binding.ccyNmEnTxt.text = "${currency.ccyNmEn}"
+//            binding.codeTxt.text = "${currency.code}"
+//            binding.ccyTxt.text = "${currency.ccy}"
+//            binding.ccyNmRuTxt.text = "${currency.ccyNmRu}"
+            binding.ccyNmUzTxt.text = "${currency.ccy}"
+//            binding.ccyNmEnTxt.text = "${currency.ccyNmEn}"
             binding.nominalTxt.text = "${currency.nominal}"
             binding.rateTxt.text = "${currency.rate}"
             binding.diffTxt.text = "${currency.diff}"

@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClent {
-    const val BASE_URL="https://www.simplifiedcoding.net"
+    const val BASE_URL="https://raw.githubusercontent.com"
 
    fun getRetrofit(): Retrofit {
 
